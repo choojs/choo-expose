@@ -1,7 +1,7 @@
 var removeItems = require('remove-array-items')
 var onIdle = require('on-idle')
 
-var MAX_HISTORY_LENGTH = 60   // How many items we should keep around
+var MAX_HISTORY_LENGTH = 150   // How many items we should keep around
 
 module.exports = expose
 
@@ -21,6 +21,7 @@ function expose () {
     var i = 0
     window.choo._history = history
     window.choo.history = showHistory
+    Object.defineProperty(window.choo, 'log', { get: showHistory })
     Object.defineProperty(window.choo, 'history', { get: showHistory })
 
     emitter.on('*', function (name, data) {

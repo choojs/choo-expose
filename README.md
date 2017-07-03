@@ -18,7 +18,7 @@ window.choo.on('foo', function (data) {
   console.log('foo called', data)
 })
 
-window.choo.history
+window.choo.log
 // => table view of history
 ```
 
@@ -29,8 +29,9 @@ Create a new `choo-expose` instance.
 ### `window.choo.state`
 Get the current state.
 
+### `window.choo.log`
 ### `window.choo.history`
-Get an overview of the last 60 events.
+Get an overview of the most recent events.
 
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
