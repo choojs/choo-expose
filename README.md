@@ -34,7 +34,7 @@ Get the current state.
 Get an overview of the most recent events.
 
 ### `window.choo.copy`
-Seralize an object into JSON and copy it to the clipboard.
+Serialize an object into JSON and copy it to the clipboard.
 Must be called in response to a user gesture event, like click or keyup.
 
 Example:
