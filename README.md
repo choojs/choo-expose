@@ -33,6 +33,26 @@ Get the current state.
 ### `window.choo.history`
 Get an overview of the most recent events.
 
+### `window.choo.copy`
+Seralize an object into JSON and copy it to the clipboard.
+Must be called in response to a user gesture event, like click or keyup.
+
+Example:
+
+```js
+window.addEventListener('keyup', function (e) {
+  // press 'c' to copy current state
+  if (e.keyCode === 67) {
+    window.choo.copy(window.choo.state)
+  }
+})
+
+// also works with nested paths such as:
+var object = { hello: { world: { lorem: 'ipsum' } } }
+window.choo.copy('hello.world.lorem', object)
+// will copy 'ipsum' to keyboard
+```
+
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
 
