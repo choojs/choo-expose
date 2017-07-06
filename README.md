@@ -43,14 +43,18 @@ Example:
 window.addEventListener('keyup', function (e) {
   // press 'c' to copy current state
   if (e.keyCode === 67) {
-    window.choo.copy(window.choo.state)
+    window.choo.copy()
   }
 })
 
 // also works with nested paths such as:
 var object = { hello: { world: { lorem: 'ipsum' } } }
 window.choo.copy('hello.world.lorem', object)
-// will copy 'ipsum' to keyboard
+// will copy 'ipsum' to clipboard
+
+// and objects:
+window.choo.copy({cool: 'hey'})
+// will copy {'cool': 'hey'} to clipboard
 ```
 
 ## License
