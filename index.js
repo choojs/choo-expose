@@ -45,6 +45,7 @@ function expose () {
     }
 
     function copy (state) {
+      if (!state || typeof state === 'function') state = window.choo.state
       stateCopy(typeof state === 'string' ? pluck.apply(this, arguments) : state)
     }
   }
