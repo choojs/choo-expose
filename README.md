@@ -39,14 +39,29 @@ Must be called in response to a user gesture event, like click or keyup.
 
 Example:
 
+#### copy whole choo state to clipboard
+
 ```js
 window.addEventListener('keyup', function (e) {
-  // press 'c' to copy current state
+  // press 'c' to copy current state to clipboard
   if (e.keyCode === 67) {
     window.choo.copy()
   }
 })
+```
 
+#### copy choo state at a specific path
+
+```js
+window.addEventListener('keyup', function (e) {
+  // press 'c' to copy current state at a specific path
+  if (e.keyCode === 67) {
+    window.choo.copy('state.foo.bar')
+  }
+})
+```
+
+```js
 // also works with nested paths such as:
 var object = { hello: { world: { lorem: 'ipsum' } } }
 window.choo.copy('hello.world.lorem', object)
