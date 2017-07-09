@@ -46,7 +46,7 @@ function expose () {
 
     function copy (state) {
       var isStateString = state && typeof state === 'string'
-      var isChooPath = isStateString && state.indexOf('state.') === 0
+      var isChooPath = isStateString && arguments.length === 1 && state.indexOf('state.') === 0
 
       if (!state || typeof state === 'function') state = window.choo.state
       if (isChooPath) [].push.call(arguments, {state: window.choo.state})
