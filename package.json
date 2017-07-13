@@ -2,7 +2,7 @@
   "name": "choo-expose",
   "description": "Expose a choo instance on the window",
   "repository": "yoshuawuyts/choo-expose",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "scripts": {
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "start": "node .",
