@@ -10,6 +10,7 @@
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov"
   },
   "dependencies": {
+    "clone": "^2.1.1",
     "on-idle": "^3.1.0",
     "plucker": "0.0.0",
     "remove-array-items": "^1.0.0",

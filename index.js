@@ -6,6 +6,7 @@ module.exports = expose
 function expose () {
   return function (state, emitter) {
     emitter.on('DOMContentLoaded', function () {
+      if (typeof window === 'undefined') return
       window.choo = {}
 
       window.choo.state = state
