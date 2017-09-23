@@ -1,10 +1,11 @@
+var debug = require('./lib/debug')
 var copy = require('./lib/copy')
 var log = require('./lib/log')
 
 module.exports = expose
 
 function expose () {
-  return function (state, emitter) {
+  return function (state, emitter, app) {
     emitter.on('DOMContentLoaded', function () {
       if (typeof window === 'undefined') return
       window.choo = {}
@@ -16,6 +17,8 @@ function expose () {
       window.choo.on = function (eventName, listener) {
         emitter.on(eventName, listener)
       }
+
+      Object.defineProperty(window.choo, 'debug', { get: debug(state, emitter, app) })
 
       window.choo.log = log(state, emitter)
       window.choo.copy = copy
