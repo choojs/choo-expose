@@ -44,6 +44,21 @@ a test based on the current application state.
 ❯ choo.copy('href')
 ```
 
+### `choo.debug`
+Log all state modificiations using
+[object-change-callsite](https://github.com/yoshuawuyts/object-change-callsite/).
+Logs out the key, value, and stack trace for the change. Useful when you're
+dealing with unexpected values in your state. Especially useful when enabling
+asynchronous stack traces in the devtools.
+
+```txt
+// Enable debugging
+❯ choo.debug
+
+// Disable debugging
+❯ choo.debug = false
+```
+
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
 

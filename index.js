@@ -18,7 +18,7 @@ function expose () {
         emitter.on(eventName, listener)
       }
 
-      Object.defineProperty(window.choo, 'debug', { get: debug(state, emitter, app) })
+      Object.defineProperty(window.choo, 'debug', debug(state, emitter, app))
 
       window.choo.log = log(state, emitter)
       window.choo.copy = copy
