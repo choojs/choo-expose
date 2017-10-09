@@ -24,26 +24,6 @@ Log out the Choo state object.
 ❯ choo.state
 ```
 
-### `choo.log`
-Log out the last 150 events that occured in Choo. Useful during debugging to
-quickly figure out which sequences of events were responsible for the current
-state.
-```txt
-❯ choo.log
-```
-
-### `choo.copy([selector])`
-Serialize the current state to JSON and copy it to the clipboard. Can be passed
-a selector (such as `href`) to do a partial copy. Useful if you want to create
-a test based on the current application state.
-```txt
-// Copy all of state.
-❯ choo.copy()
-
-// Copy `state.href`.
-❯ choo.copy('href')
-```
-
 ### `choo.debug`
 Log all state modificiations using
 [object-change-callsite](https://github.com/yoshuawuyts/object-change-callsite/).
@@ -57,6 +37,30 @@ asynchronous stack traces in the devtools.
 
 // Disable debugging
 ❯ choo.debug = false
+```
+
+### `choo.log`
+Log out the last 150 events that occured in Choo. Useful during debugging to
+quickly figure out which sequences of events were responsible for the current
+state.
+```txt
+❯ choo.log
+```
+
+To enable `state` snapshots on each event, call `choo.debug`. Be warned that
+this may severely impact performance – it's recommended to only use this for
+debugging state.
+
+### `choo.copy([selector])`
+Serialize the current state to JSON and copy it to the clipboard. Can be passed
+a selector (such as `href`) to do a partial copy. Useful if you want to create
+a test based on the current application state.
+```txt
+// Copy all of state.
+❯ choo.copy()
+
+// Copy `state.href`.
+❯ choo.copy('href')
 ```
 
 ## License
