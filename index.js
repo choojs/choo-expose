@@ -1,5 +1,6 @@
 var EventEmitter = require('events').EventEmitter
 
+var storage = require('./lib/storage')
 var debug = require('./lib/debug')
 var copy = require('./lib/copy')
 var log = require('./lib/log')
@@ -25,6 +26,8 @@ function expose () {
 
       window.choo.log = log(state, emitter, app, localEmitter)
       window.choo.copy = copy
+
+      storage()
     })
   }
 }

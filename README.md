@@ -30,13 +30,18 @@ Log all state modificiations using
 Logs out the key, value, and stack trace for the change. Useful when you're
 dealing with unexpected values in your state. Especially useful when enabling
 asynchronous stack traces in the devtools.
-
 ```txt
 // Enable debugging
 ❯ choo.debug
 
 // Disable debugging
 ❯ choo.debug = false
+```
+
+### `choo.storage`
+Log out information about the browser's storage capabilities.
+```txt
+❯ choo.storage
 ```
 
 ### `choo.log`
