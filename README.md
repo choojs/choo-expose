@@ -18,6 +18,12 @@ app.mount('body')
 ```
 
 ## Commands
+### `choo.help`
+Print out information about all commands.
+```txt
+❯ choo.help
+```
+
 ### `choo.state`
 Log out the Choo state object.
 ```txt

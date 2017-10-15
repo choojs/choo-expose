@@ -3,6 +3,7 @@ var EventEmitter = require('events').EventEmitter
 var storage = require('./lib/storage')
 var debug = require('./lib/debug')
 var copy = require('./lib/copy')
+var help = require('./lib/help')
 var log = require('./lib/log')
 
 module.exports = expose
@@ -28,6 +29,7 @@ function expose () {
       window.choo.copy = copy
 
       storage()
+      help()
     })
   }
 }
