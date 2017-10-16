@@ -10,10 +10,12 @@
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov"
   },
   "dependencies": {
+    "choo-hooks": "^1.0.0",
     "clone": "^2.1.1",
     "nanologger": "^1.3.1",
+    "nanotiming": "^6.1.4",
     "object-change-callsite": "^1.0.2",
-    "on-idle": "^3.1.0",
+    "on-idle": "^3.1.3",
     "plucker": "0.0.0",
     "prettier-bytes": "^1.0.4",
     "remove-array-items": "^1.0.0",

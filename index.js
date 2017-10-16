@@ -1,6 +1,7 @@
 var EventEmitter = require('events').EventEmitter
 
 var storage = require('./lib/storage')
+var logger = require('./lib/logger')
 var debug = require('./lib/debug')
 var copy = require('./lib/copy')
 var log = require('./lib/log')
@@ -10,6 +11,12 @@ module.exports = expose
 function expose () {
   return function (state, emitter, app) {
     var localEmitter = new EventEmitter()
+
+    // We should start the logger before DOM is loaded.
+    if (typeof window !== 'undefined') {
+      logger(state, emitter, app)
+    }
+
     emitter.on('DOMContentLoaded', function () {
       if (typeof window === 'undefined') return
       window.choo = {}
