@@ -9,7 +9,9 @@ var log = require('./lib/log')
 module.exports = expose
 
 function expose () {
-  return function (state, emitter, app) {
+  store.storeName = 'choo-devtools'
+  return store
+  function store (state, emitter, app) {
     var localEmitter = new EventEmitter()
 
     // We should start the logger before DOM is loaded.
