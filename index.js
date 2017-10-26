@@ -6,6 +6,7 @@ var debug = require('./lib/debug')
 var copy = require('./lib/copy')
 var help = require('./lib/help')
 var log = require('./lib/log')
+var getAllRoutes = require('wayfarer/get-all-routes')
 
 module.exports = expose
 
@@ -36,6 +37,7 @@ function expose () {
 
       window.choo.log = log(state, emitter, app, localEmitter)
       window.choo.copy = copy
+      window.choo.routes = Object.keys(getAllRoutes(app.router.router))
 
       storage()
       help()

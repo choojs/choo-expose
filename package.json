@@ -19,7 +19,8 @@
     "plucker": "0.0.0",
     "prettier-bytes": "^1.0.4",
     "remove-array-items": "^1.0.0",
-    "state-copy": "^1.0.2"
+    "state-copy": "^1.0.2",
+    "wayfarer": "^6.6.2"
   },
   "devDependencies": {
     "dependency-check": "^2.8.0",
