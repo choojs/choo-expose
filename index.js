@@ -35,7 +35,7 @@ function expose () {
 
       Object.defineProperty(window.choo, 'debug', debug(state, emitter, app, localEmitter))
 
-      window.choo.log = log(state, emitter, app, localEmitter)
+      log(state, emitter, app, localEmitter)
       window.choo.copy = copy
       window.choo.routes = Object.keys(getAllRoutes(app.router.router))
 
