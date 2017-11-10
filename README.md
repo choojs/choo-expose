@@ -74,6 +74,12 @@ a test based on the current application state.
 ❯ choo.copy('href')
 ```
 
+### `choo.routes`
+Get an array with the registered routes.
+```txt
+❯ choo.routes
+```
+
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
 
