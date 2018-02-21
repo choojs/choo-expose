@@ -37,7 +37,9 @@ function expose () {
 
       log(state, emitter, app, localEmitter)
       window.choo.copy = copy
-      window.choo.routes = Object.keys(getAllRoutes(app.router.router))
+      if (app.router && app.router.router) {
+        window.choo.routes = Object.keys(getAllRoutes(app.router.router))
+      }
 
       storage()
       help()
