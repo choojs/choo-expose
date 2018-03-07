@@ -5,6 +5,7 @@ var logger = require('./lib/logger')
 var debug = require('./lib/debug')
 var copy = require('./lib/copy')
 var help = require('./lib/help')
+var perf = require('./lib/perf')
 var log = require('./lib/log')
 var getAllRoutes = require('wayfarer/get-all-routes')
 
@@ -36,6 +37,7 @@ function expose () {
       debug(state, emitter, app, localEmitter)
 
       log(state, emitter, app, localEmitter)
+      perf(state, emitter, app, localEmitter)
       window.choo.copy = copy
       if (app.router && app.router.router) {
         window.choo.routes = Object.keys(getAllRoutes(app.router.router))
