@@ -80,6 +80,14 @@ Get an array with the registered routes.
 ❯ choo.routes
 ```
 
+### `choo.perf[type]`
+Log out performance metrics for Choo. There are different types of entries we
+can show:
+- `choo.perf.all` Log out all data.
+- `choo.perf.core` Only log out data about Choo's built-in methods.
+- `choo.perf.events` Only log out information about the event bus.
+- `choo.perf.components` Only log out information about components.
+
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
 
