@@ -22,10 +22,13 @@
     "wayfarer": "^6.6.2"
   },
   "devDependencies": {
+    "choo": "^6.10.0",
     "dependency-check": "^2.8.0",
+    "global": "^4.3.2",
     "nyc": "^10.1.2",
+    "proxyquire": "^2.0.0",
     "standard": "^9.0.0",
-    "tape": "^4.6.3"
+    "tape": "^4.9.0"
   },
   "keywords": [
     "choo",

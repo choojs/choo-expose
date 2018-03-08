@@ -1,4 +1,5 @@
 var EventEmitter = require('events').EventEmitter
+var window = require('global/window')
 
 var storage = require('./lib/storage')
 var logger = require('./lib/logger')
@@ -17,7 +18,9 @@ function expose () {
     var localEmitter = new EventEmitter()
 
     // We should start the logger before DOM is loaded.
+    // FIXME: Ask a choo-devtools maintainer what this is for
     if (typeof window !== 'undefined') {
+      console.log('logger started')
       logger(state, emitter, app)
     }
 
