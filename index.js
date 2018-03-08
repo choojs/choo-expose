@@ -11,17 +11,15 @@ var getAllRoutes = require('wayfarer/get-all-routes')
 
 module.exports = expose
 
-function expose () {
+function expose (opts) {
+  opts = opts || {}
   store.storeName = 'choo-devtools'
   return store
   function store (state, emitter, app) {
     var localEmitter = new EventEmitter()
 
-    // We should start the logger before DOM is loaded.
-    // FIXME: Ask a choo-devtools maintainer what this is for
     if (typeof window !== 'undefined') {
-      console.log('logger started')
-      logger(state, emitter, app)
+      logger(state, emitter, opts)
     }
 
     emitter.on('DOMContentLoaded', function () {
