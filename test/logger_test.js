@@ -22,5 +22,5 @@ test('Filtering out logs', function (t) {
   })
   app.toString('/')
 
-  app.emitter.emit('foo', {ignoreThis: true})
+  app.emitter.emit('foo')
 })
