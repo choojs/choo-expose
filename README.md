@@ -17,6 +17,15 @@ if (process.env.NODE_ENV !== 'production') {
 app.mount('body')
 ```
 
+## API
+### `var devtoolStore = require('choo-devtools')(opts)`
+This module exposes a function that return a choo store. The function accept 
+a single option argument, with the following properties:
+
+- **filter**: A function to filter events for the devtools logger. The filter 
+function accept three arguments `eventName, data, timing` and should return `true` 
+(the event will be logged) or `false` (the event wont be logged).
+
 ## Commands
 ### `choo.help`
 Print out information about all commands.
