@@ -27,8 +27,8 @@ function expose (opts) {
       window.choo = {}
 
       window.choo.state = state
-      window.choo.emit = function (eventName, data) {
-        emitter.emit(eventName, data)
+      window.choo.emit = function () {
+        emitter.emit.apply(emitter, arguments)
       }
       window.choo.on = function (eventName, listener) {
         emitter.on(eventName, listener)
